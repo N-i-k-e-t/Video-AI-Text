@@ -37,7 +37,7 @@ promptInput.addEventListener('keyup', (event) => {
 //This function now uses relative paths (adjust if your videos are in a subfolder)
 function getVideoURL(prompt) {
     const videoUrls = {
-        "lighting lamp": "/assets/Flame.mp4", // Relative path from your HTML
+        "lighting lamp": "assets/Flame.mp4", // Relative path from your HTML
         // Add more prompts and video URLs as needed...
     };
     return videoUrls[prompt] || null;
