@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    max-width: 90%; /* Adjust this percentage as needed */
+    max-width: 1200px; /*added to limit the max width*/
+    margin: 0 auto;
+}
+
+.header { /* Added a header container for better structure */
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2.5em; /* Slightly reduced font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000;
+    color: #FFD700; /* Golden Yellow */
+}
+
+.subtitle {
+    font-size: 1.2em; /* Slightly reduced font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #000;
+    color: #A0D2EB; /* Slightly darker light blue */
+}
+
+.prompt-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.prompt-container input {
+    padding: 10px;
+    border: 2px solid #555; /* Darker border */
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px;
+    font-size: 16px;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    color: #ddd; /* Lighter text color for input */
+}
+
+.prompt-container button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #4CAF50, #81C784); /* Green gradient */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.prompt-container button:hover {
+    background: linear-gradient(to right, #388E8E, #66CDAA); /* Darker green on hover */
+}
+
+.video-container {
+    width: 100%; /* Make video responsive */
+    max-width: 640px; /* Limit max width */
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.video-container.visible {
+    opacity: 1;
+}
+
+.video-container video {
+    width: 100%;
+    /* Removed max-width and max-height for full container usage */
+}
+
+
+/*Added for screen reader accessibility*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}   
